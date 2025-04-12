@@ -6,6 +6,8 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 ## Get started
 
+create an `.env` file with your stability api key.
+
 #### Android
 
 Android previews are defined as a `workspace.onStart` hook and started as a vscode task when the workspace is opened/started.

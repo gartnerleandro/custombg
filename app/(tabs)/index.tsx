@@ -11,7 +11,6 @@ import {
   Platform,
   ScrollView
 } from 'react-native';
-import Constants from 'expo-constants';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage'; // Importar AsyncStorage
 
@@ -21,7 +20,7 @@ import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
 // --- Configuración --- 
-const STABILITY_API_KEY = "sk-8B51gSlx0eONaHAqmFBqPPENW7piMTi4uGKkcJchpf3HgcLv";
+const STABILITY_API_KEY = process.env.EXPO_PUBLIC_STABILITY_API_KEY;
 const STABILITY_API_HOST = 'https://api.stability.ai';
 const STABILITY_API_ENDPOINT = `${STABILITY_API_HOST}/v2beta/stable-image/generate/ultra`;
 const HISTORY_STORAGE_KEY = '@ImageGenHistory:prompts'; // Clave para AsyncStorage
